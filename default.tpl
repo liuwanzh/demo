@@ -13,16 +13,6 @@
 
   <body>
       <div class="content">
-          
-<h1 id="toc_1">try</h1>
-<h2 id="toc_1.1">lets try</h2>
-
-<h1 id="toc_2">Generated Links</h1>
-<ul>
-<li>
-<a href="index.html.html">首页</a>
-
-</ul>
-
+          %content%
       </div> 
 </body>
