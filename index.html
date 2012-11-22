@@ -56,16 +56,3 @@ title: 我的Blog
         <h6 align="center">Contact me via:liuwanzh@qq.com</h6>
     </div>
 
-　　<h2>{{ page.title }}</h2>
-
-　　<p>最新d 文章</p>
-
-　　<ul>
-
-　　　　{% for post in site.posts %}
-
-　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-
-　　　　{% endfor %}
-
-　　</ul>
