@@ -180,10 +180,8 @@ template_default及template_path，决定了模板文件的位置，但是其实
 <h3 id="toc_3.1.1">搭建blog的过程</h3>
 <p>
    前提：安装了git，并且有github账户。
+   <strong>Step 1 创建项目</strong>
 </p>
-<blockquote>
-<strong>Step 1 创建项目</strong>
-</blockquote>
 <pre>
     $ mkdir demo  我准备建立项目名字叫demo
     $ cd demo
@@ -191,15 +189,11 @@ template_default及template_path，决定了模板文件的位置，但是其实
     $ git checkout --orphan gh-pages  
     创建一个没有父亲节点的分支gh-pages，这是因为github规定，只有该分支中的页面，才会生成网页文件。以下所有操作就在该分支完成。
 </pre>
-<blockquote>
-<strong>Step 2 创建设置文件</strong>
-</blockquote>
 <p>
+   <strong>Step 2 创建设置文件</strong>
    在项目根目录下，简历_config.yml文件，它是jekyll的设置文件，在里面填入以下内容。解释参考<a href="https://github.com/mojombo/jekyll/wiki/Configuration">jekyll官方说明</a>。
+   <strong>Step 3 创建模板文件</strong>
 </p>
-<blockquote>
-<strong>Step 3 创建模板文件</strong>
-</blockquote>
 <pre>
     $ mkdir _layouts
     $ vim default.html   这就是Blog的默认模板
@@ -271,9 +265,9 @@ title: 我的Blog
         &lt;h6 align="center"&gt;Contact me via:liuwanzh@qq.com&lt;/h6&gt;
     &lt;/div&gt;
 </pre>
-<blockquote>
-<strong>Step 5 发布内容</strong>
-</blockquote>
+<p>
+   <strong>Step 5 发布内容</strong>
+</p>
 <pre>
     $ git add . “.“指的是demo目录
     $ git commit -m "commit comment"
@@ -282,9 +276,9 @@ title: 我的Blog
     只有第一次commit的时候需要这样，以后的每一次推送到github，就直接做下面的push就ok了。
     $ git push origin gh-pages
 </pre>
-<blockquote>
-上传成功后，等10 min左右，访问*<a href="http://username.github.com/demo/*就可以看到blog生成了。">http://username.github.com/demo/*就可以看到blog生成了。</a>
-</blockquote>
+<p>
+   上传成功后，等10 min左右，访问*<a href="http://username.github.com/demo/*就可以看到blog生成了。">http://username.github.com/demo/*就可以看到blog生成了。</a>
+</p>
 
       </div> 
 </body>
