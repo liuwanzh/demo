@@ -25,9 +25,10 @@
 ==标题2==
  =居中的标题=
 *粗体*
-[[wiki path|wiki item]]
-[1.jpg] 输出<img src="1.jpg"/>
-[[/demo/pic/1.jpg]]  输出图片，链接向1.jpg地址
+[[wiki path|wiki item]] 
+输出<img src="1.jpg"/>
+{{/demo/pic/1.jpg}}  输出图片，链接向1.jpg地址
+{{/demo/pic/1.jpg|带文字说明的图片}}
 * 无序列表条目1
 * 无序列表条目2
   - 子列表条目1
