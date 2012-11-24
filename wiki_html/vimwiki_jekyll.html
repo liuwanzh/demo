@@ -29,55 +29,29 @@
    他说这个东西叫做，vimwiki。简单地说，就是可以按照编辑wiki的格式，方便地做笔记，然后一键生成对应的html文件。与单纯地去编辑html文件相比，vimwiki有两大优势，一是编辑语法，wiki的语法跟html的语法比起来简单太多了。二是可以分篇处理，wiki文件夹和对应我wiki_html文件夹一一对应，条理清晰。
 </p>
 <h3 id="toc_1.1.1">Vimwiki主要语法</h3>
-<p>
-{ {{=标题1=
-</p>
-<h2 id="toc_1.2" class="justcenter">标题2</h2>
-<h1 id="toc_2" class="justcenter">居中的标题</h1>
-<p>
-<strong>粗体</strong>
-<a href="wiki path.html">wiki item</a>
+<pre =标题1=>
+ ==标题2==
+ =居中的标题=
+*粗体*
+[[wiki path|wiki item]]
 [1.jpg] 输出&lt;img src="1.jpg"/&gt;
-<a href="1.jpg.html">1.jpg</a>  输出图片，链接向1.jpg地址
-</p>
-<ul>
-<li>
-无序列表条目1
+[[1.jpg]]  输出图片，链接向1.jpg地址
+* 无序列表条目1
+* 无序列表条目2
+  - 子列表条目1
+  - 子列表条目2
 
-<li>
-无序列表条目2
-
-<ul>
-<li>
-子列表条目1
-
-<li>
-子列表条目2
-
-</ul>
-</ul>
-
-<ol>
-<li>
-有序列表条目1
-
-<li>
-有序列表条目2
-
-<ol>
-<li>
-这是什么呢 
-
-</ol>
-</ol>
+# 有序列表条目1
+# 有序列表条目2
+  # 这是什么呢 
+</pre>
 <p>
-}}}
 对应的效果是这样的：
 </p>
-<h4 id="toc_2.0.0.1" class="justcenter">———————————————————————————————————————————————————————————————————————————————————————</h4>
-<h1 id="toc_3">标题1</h1>
-<h2 id="toc_3.1">标题2</h2>
-<h1 id="toc_4" class="justcenter">居中的标题</h1>
+<h4 id="toc_1.1.1.1" class="justcenter">———————————————————————————————————————————————————————————————————</h4>
+<h1 id="toc_2">标题1</h1>
+<h2 id="toc_2.1">标题2</h2>
+<h1 id="toc_3" class="justcenter">居中的标题</h1>
 <p>
 <strong>粗体</strong>
 <a href="wiki path.html">wiki item</a>
@@ -111,11 +85,11 @@
 <ol>
 <li>
 这是什么呢
- ====———————————————————————————————————————————————————————————————————————————————————————====
+ ====———————————————————————————————————————————————————————————————————====
 
 </ol>
 </ol>
-<h3 id="toc_4.0.1">Vimwiki配置</h3>
+<h3 id="toc_3.0.1">Vimwiki配置</h3>
 <pre>
  let g:vimwiki_list = [{'path':'/home/liuwanzh/for_git/demo/wiki/',
              \'path_html':'/home/liuwanzh/for_git/demo/wiki_html',
@@ -143,9 +117,9 @@
  map &lt;S-F9&gt; :VimwikiAll2HTML&lt;cr&gt;
  map &lt;F9&gt; :Vimwiki2HTML&lt;cr&gt;
 </pre>
-<blockquote>
-把配置添加到~/.vimrc里即可。配置很大一部分是抄网上的前辈的，其实看似理解，但操作起来有一下不明白的地方，似乎不是这么回事。这里举几个我试过以后知道一定要配好的：
-</blockquote>
+<p>
+   把配置添加到~/.vimrc里即可。配置很大一部分是抄网上的前辈的，其实看似理解，但操作起来有一下不明白的地方，似乎不是这么回事。这里举几个我试过以后知道一定要配好的：
+</p>
 <ol>
 <li>
 template_default及template_path，决定了模板文件的位置，但是其实我最后是直接改它源码来确定位置的，我的vim插件在bundle里，故相应的源码在~/.vim/bundle/vimwiki/plugin/vimwiki.vim中。而源码默认的模板路径在~/.vim/bundle/vimwiki/autoload/vimwiki/default.tpl中。*这个模板可以自己修改样式，添加css等等，只要把content留下来就好。*以下是我的模板default.tpl，它决定了我的一篇篇博文生成的html长什么样：
@@ -177,6 +151,7 @@ template_default及template_path，决定了模板文件的位置，但是其实
 &lt;/body&gt;
 </pre>
 
+<ol>
 <li>
 "ext":".wiki" 这样的话，如果wiki的文件后缀不是.wiki，它是不会生成html的。
 
@@ -191,15 +166,18 @@ template_default及template_path，决定了模板文件的位置，但是其实
 还有很多其他可以设置的地方，感觉我暂时用不上那么多就没管了。
 
 </ol>
-<h2 id="toc_4.1">聊聊jekyll</h2>
+</ol>
+<h2 id="toc_3.1">聊聊jekyll</h2>
+<p>
+   Jekyll是一个静态站点生成器，它会根据网页源码生成静态文件。它提供的模板，变量，插件等功能，所以实际上可以用来编写整个网站。也就是说，先在本地编写符合Jekyll规范的网站源码，上传到github，由github生成并托管整个网站。
+   注意，它生成的是静态网页，添加动态功能必须使用外部服务，比如评论功能只能用disqus。另外，它不适合做大型网站，因为没有用到数据库，每运行一次都必须便利全部的文本文件，网站越大，生成时间越长。
+   所以，用它来搭建小型blog还是不错的～
+</p>
+<h3 id="toc_3.1.1">搭建blog的过程</h3>
+<p>
+   前提：安装了git，并且有github账户。
+</p>
 <blockquote>
-Jekyll是一个静态站点生成器，它会根据网页源码生成静态文件。它提供的模板，变量，插件等功能，所以实际上可以用来编写整个网站。也就是说，先在本地编写符合Jekyll规范的网站源码，上传到github，由github生成并托管整个网站。
-注意，它生成的是静态网页，添加动态功能必须使用外部服务，比如评论功能只能用disqus。另外，它不适合做大型网站，因为没有用到数据库，每运行一次都必须便利全部的文本文件，网站越大，生成时间越长。
-所以，用它来搭建小型blog还是不错的～
-</blockquote>
-<h3 id="toc_4.1.1">搭建blog的过程</h3>
-<blockquote>
-前提：安装了git，并且有github账户。
 <strong>Step 1 创建项目</strong>
 </blockquote>
 <pre>
@@ -210,16 +188,20 @@ Jekyll是一个静态站点生成器，它会根据网页源码生成静态文�
 </pre>
 <blockquote>
 <strong>Step 2 创建设置文件</strong>
-在项目根目录下，简历_config.yml文件，它是jekyll的设置文件，在里面填入以下内容。解释参考<a href="https://github.com/mojombo/jekyll/wiki/Configuration">jekyll官方说明</a>。
+</blockquote>
+<p>
+   在项目根目录下，简历_config.yml文件，它是jekyll的设置文件，在里面填入以下内容。解释参考<a href="https://github.com/mojombo/jekyll/wiki/Configuration">jekyll官方说明</a>。
+</p>
+<blockquote>
 <strong>Step 3 创建模板文件</strong>
 </blockquote>
 <pre>
     $ mkdir _layouts
     $ vim default.html   这就是Blog的默认模板
 </pre>
-<blockquote>
-跟前面vimwiki的模板很类似，留下content就好。以下是我的模板：
-</blockquote>
+<p>
+   跟前面vimwiki的模板很类似，留下content就好。以下是我的模板：
+</p>
 <pre>
     &lt;!DOCTYPE html&gt;
 &lt;html&gt;
