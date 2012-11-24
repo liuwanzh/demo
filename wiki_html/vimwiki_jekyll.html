@@ -29,13 +29,16 @@
    他说这个东西叫做，vimwiki。简单地说，就是可以按照编辑wiki的格式，方便地做笔记，然后一键生成对应的html文件。与单纯地去编辑html文件相比，vimwiki有两大优势，一是编辑语法，wiki的语法跟html的语法比起来简单太多了。二是可以分篇处理，wiki文件夹和对应我wiki_html文件夹一一对应，条理清晰。
 </p>
 <h3 id="toc_1.1.1">Vimwiki主要语法</h3>
+<p>
+   有不懂的可以随时:h vimwiki，打开帮助文档，然后搜索关键词找用法。
+</p>
 <pre =标题1=>
  ==标题2==
  =居中的标题=
 *粗体*
 [[wiki path|wiki item]]
-[1.jpg] 输出&lt;img src="1.jpg"/&gt;
-[[1.jpg]]  输出图片，链接向1.jpg地址
+{{/demo/pic/test.jpg}}  输出图片，链接向test.jpg地址
+{{/demo/pic/test.jpg|带文字说明的图片}}
 * 无序列表条目1
 * 无序列表条目2
   - 子列表条目1
@@ -55,9 +58,8 @@
 <p>
 <strong>粗体</strong>
 <a href="wiki path.html">wiki item</a> 
-输出&lt;img src="1.jpg"/&gt;
-<img src="/demo/pic/1.jpg" />  输出图片，链接向1.jpg地址
-<img src="/demo/pic/1.jpg" alt="带文字说明的图片" />
+<img src="/demo/pic/test.jpg" />  输出图片，链接向1.jpg地址
+<img src="/demo/pic/test.jpg" alt="带文字说明的图片" />
 </p>
 <ul>
 <li>
