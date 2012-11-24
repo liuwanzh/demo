@@ -36,6 +36,7 @@
 # 有序列表条目1
 # 有序列表条目2
   # 这是什么呢
+
  ====———————————————————————————————————————————————————————————————————====
 ===Vimwiki配置===
 {{{
@@ -112,7 +113,8 @@
     $ mkdir demo  我准备建立项目名字叫demo
     $ cd demo
     $ git init
-    $ git checkout --orphan gh-pages  创建一个没有父亲节点的分支gh-pages，这是因为github规定，只有该分支中的页面，才会生成网页文件。以下所有操作就在该分支完成。
+    $ git checkout --orphan gh-pages  
+    创建一个没有父亲节点的分支gh-pages，这是因为github规定，只有该分支中的页面，才会生成网页文件。以下所有操作就在该分支完成。
     }}}
     *Step 2 创建设置文件*
    在项目根目录下，简历_config.yml文件，它是jekyll的设置文件，在里面填入以下内容。解释参考[[https://github.com/mojombo/jekyll/wiki/Configuration|jekyll官方说明]]。
@@ -174,7 +176,9 @@ title: 我的Blog
                 var day = myDate.getDate();
                 var month= myDate.getMonth();
                 var year= myDate.getYear() + 1900;
-                document.write(' <div id = "date"> <p align="right"> <font color="#ADADAD" size="6">'+ year + '.&nbsp' + month + '&nbsp.&nbsp' + '</font><font id="day" color="#FF3377" size="10" style="font-weight:600">'+day+'</font></p>');
+                document.write(' <div id = "date"> <p align="right"> 
+                <font color="#ADADAD" size="6">'+ year + '.&nbsp' + month + '&nbsp.&nbsp' + '</font>
+                <font id="day" color="#FF3377" size="10" style="font-weight:600">'+day+'</font></p>');
                 </script>
 
                 <div id="diary"> <p> <font size="3" color="white">啦啦啦，随便写几句</font></p> </div> </div>
@@ -186,7 +190,9 @@ title: 我的Blog
     {{{
     $ git add . “.“指的是demo目录
     $ git commit -m "commit comment"
-    $ git remote add origin https://github.com/username/demo.git   注意，做这一步之前要前往github网站，创建一个名为demo的new repository。只有第一次commit的时候需要这样，以后的每一次推送到github，就直接做下面的push就ok了。
+    $ git remote add origin https://github.com/username/demo.git   
+    注意，做这一步之前要前往github网站，创建一个名为demo的new repository。
+    只有第一次commit的时候需要这样，以后的每一次推送到github，就直接做下面的push就ok了。
     $ git push origin gh-pages
     }}}
     上传成功后，等10 min左右，访问*http://username.github.com/demo/*就可以看到blog生成了。

@@ -85,10 +85,11 @@
 <ol>
 <li>
 这是什么呢
- ====———————————————————————————————————————————————————————————————————====
 
 </ol>
 </ol>
+
+<h4 id="toc_3.0.0.1" class="justcenter">———————————————————————————————————————————————————————————————————</h4>
 <h3 id="toc_3.0.1">Vimwiki配置</h3>
 <pre>
  let g:vimwiki_list = [{'path':'/home/liuwanzh/for_git/demo/wiki/',
@@ -184,7 +185,8 @@ template_default及template_path，决定了模板文件的位置，但是其实
     $ mkdir demo  我准备建立项目名字叫demo
     $ cd demo
     $ git init
-    $ git checkout --orphan gh-pages  创建一个没有父亲节点的分支gh-pages，这是因为github规定，只有该分支中的页面，才会生成网页文件。以下所有操作就在该分支完成。
+    $ git checkout --orphan gh-pages  
+    创建一个没有父亲节点的分支gh-pages，这是因为github规定，只有该分支中的页面，才会生成网页文件。以下所有操作就在该分支完成。
 </pre>
 <blockquote>
 <strong>Step 2 创建设置文件</strong>
@@ -256,7 +258,9 @@ title: 我的Blog
                 var day = myDate.getDate();
                 var month= myDate.getMonth();
                 var year= myDate.getYear() + 1900;
-                document.write(' &lt;div id = "date"&gt; &lt;p align="right"&gt; &lt;font color="#ADADAD" size="6"&gt;'+ year + '.&amp;nbsp' + month + '&amp;nbsp.&amp;nbsp' + '&lt;/font&gt;&lt;font id="day" color="#FF3377" size="10" style="font-weight:600"&gt;'+day+'&lt;/font&gt;&lt;/p&gt;');
+                document.write(' &lt;div id = "date"&gt; &lt;p align="right"&gt; 
+                &lt;font color="#ADADAD" size="6"&gt;'+ year + '.&amp;nbsp' + month + '&amp;nbsp.&amp;nbsp' + '&lt;/font&gt;
+                &lt;font id="day" color="#FF3377" size="10" style="font-weight:600"&gt;'+day+'&lt;/font&gt;&lt;/p&gt;');
                 &lt;/script&gt;
 
                 &lt;div id="diary"&gt; &lt;p&gt; &lt;font size="3" color="white"&gt;啦啦啦，随便写几句&lt;/font&gt;&lt;/p&gt; &lt;/div&gt; &lt;/div&gt;
@@ -270,7 +274,9 @@ title: 我的Blog
 <pre>
     $ git add . “.“指的是demo目录
     $ git commit -m "commit comment"
-    $ git remote add origin https://github.com/username/demo.git   注意，做这一步之前要前往github网站，创建一个名为demo的new repository。只有第一次commit的时候需要这样，以后的每一次推送到github，就直接做下面的push就ok了。
+    $ git remote add origin https://github.com/username/demo.git   
+    注意，做这一步之前要前往github网站，创建一个名为demo的new repository。
+    只有第一次commit的时候需要这样，以后的每一次推送到github，就直接做下面的push就ok了。
     $ git push origin gh-pages
 </pre>
 <blockquote>
