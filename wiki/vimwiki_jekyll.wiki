@@ -160,7 +160,7 @@
      　</body>
     </html>
     }}}
-   Jekyll使用[[https://github.com/shopify/liquid/wiki/liquid-for-designers|Liquid模板寓言]]，{{content}}表示文章内容，简单地说，就是wiki生成html的时候，套到这个content里去。更多模板变量参考[[https://github.com/mojombo/jekyll/wiki/Template-Data|官方文档]]。
+   Jekyll使用[[https://github.com/shopify/liquid/wiki/liquid-for-designers|Liquid模板语言]]，/{/{content/}/}表示文章内容，简单地说，就是wiki生成html的时候，套到这个content里去。更多模板变量参考[[https://github.com/mojombo/jekyll/wiki/Template-Data|官方文档]]。
   
   *Step 4 创建网页*
   
@@ -205,4 +205,5 @@ title: 我的Blog
     只有第一次commit的时候需要这样，以后的每一次推送到github，就直接做下面的push就ok了。
     $ git push origin gh-pages
     }}}
-   上传成功后，等10 min左右，访问*http://username.github.com/demo/*就可以看到blog生成了。
+   上传成功后，等10 min左右，访问http://username.github.com/demo/
+   就可以看到blog生成了。
