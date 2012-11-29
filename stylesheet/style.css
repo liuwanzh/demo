@@ -495,6 +495,7 @@ background-color:#F9F900;
 padding:6px;
 border:3px solid white;
 width:90px;
+color:black;
 }
 
 th {
@@ -506,6 +507,7 @@ width:90px;
 
 td a font{
 text-align:center;
+color:black;
 }
 
 div.month font {
