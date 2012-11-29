@@ -510,8 +510,12 @@ th {
 text-align:center;
 background-color:#FF3377;
 border:3px solid white;
-color:black;
+color:white;
 width:90px;
+}
+
+th.tablehead {
+color:black;
 }
 
 /*有日记的内容里，超连接的文字格式*/
