@@ -60,46 +60,29 @@ the main advantage of our technique is that does not require additional hardware
 <p>
 验证步骤：
 </p>
-<ol>
-<li>
-Profiling at installation time：在安装的过程中，可信的OS使用一个选好的input来运行被测试的程序，从HPC收集上面提到的那些元素，与程序binary保存到一起。攻击者不知道用于之前选好的input是什么。
-
-<li>
-Profiling at check time:任何时候当用户要运行程序的时候，则把刚刚的选中input再代入，再收集一次HPC里的元素，进行比对。
-
-</ol>
+<h3 id="toc_1.1.1">1.Profiling at installation time</h3>
 <p>
+在安装的过程中，可信的OS使用一个选好的input来运行被测试的程序，从HPC收集上面提到的那些元素，与程序binary保存到一起。攻击者不知道用于之前选好的input是什么。
+</p>
+<h3 id="toc_1.1.2">2.Profiling at check time</h3>
+<p>
+任何时候当用户要运行程序的时候，则把刚刚的选中input再代入，再收集一次HPC里的元素，进行比对。
 不要求完全准确，保证差异在5%内。
 </p>
-
+ 
 <h2 id="toc_1.2">动态</h2>
 <p>
 验证步骤：
 </p>
-<ol>
-<li>
-Profiling
-
-</ol>
-
+<h3 id="toc_1.2.1">1.Profiling</h3>
 <p>
 与静态的第一个步骤类似，区别在于需要在整个excution的过程中，统计所有的HPC记录的元素。（大量）
 </p>
-
-<ol>
-<li>
-Model building
-
-</ol>
-
+<h3 id="toc_1.2.2">2.Model building</h3>
 <p>
 就是根据刚刚记录的东西进行数学建模啦。
 </p>
-
-<p>
-#Runtime checking
-</p>
-
+<h3 id="toc_1.2.3">3.Runtime checking</h3>
 <p>
 就计算HPC记录的元素，看是否符合上面所建的模型。
 </p>
