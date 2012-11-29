@@ -505,11 +505,12 @@ td.have_diary {
 background-color:#00E3E3;
 }
 
-/*表格标题，那个dec*/
+/*表格标题，那个月份+一点心情*/
 th {
 text-align:center;
 background-color:#FF3377;
 border:3px solid white;
+color:black;
 width:90px;
 }
 
