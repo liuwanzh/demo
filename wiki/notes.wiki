@@ -3,7 +3,7 @@
 
 = web学习笔记 =
     - [[vimwiki_jekyll|使用vimwiki和jekyll搭建方便编辑的wiki博客]]
-    - [[/demo/wiki_html/integrity_check.html|论文笔记——Are Hardware Performance Counters a Cost Effective Way for Integrity Checking of Programs?]]
+    - [[/demo/wiki_html/integrity_check|论文笔记——Are Hardware Performance Counters a Cost Effective Way for Integrity Checking of Programs?]]
     - [[http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html|My reference]]
 
 = 网站收藏 =
@@ -14,7 +14,7 @@
 == 产品相关 ==
 - [[http://www.36kr.com/|36氪   ]]     [[http://www.ifanr.com/|ifanr   ]]     [[http://cdc.tencent.com/|腾讯CDC   ]]    [[http://www.huxiu.com/|虎嗅网   ]]
 - [[http://www.pmtoo.com/|产品中国    ]]     [[http://event.geekpark.net/|极客公园]]
- -
+ 
 == 有意思的 ==
 - [[http://fm.xinli001.com/|心理FM-世界和我爱着你]]
 - [[http://zhan.renren.com/home?checked=true|小站-告诉我你的梦想]]
