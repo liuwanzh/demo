@@ -498,6 +498,10 @@ width:90px;
 color:black;
 }
 
+td.have_diary {
+background-color:#00E3E3;
+}
+
 th {
 text-align:center;
 background-color:#FF3377;
@@ -514,6 +518,8 @@ div.month font {
 font-size:20px;
 color:#FF3377;
 }
+
+
 
 
 
