@@ -51,9 +51,8 @@
 <p>
 java开发，支持linux，OS X Tiger，windows
 </p>
-<h3 id="toc_2.3.1">功能吐槽</h3>
-<h3 id="toc_2.3.2">用户角色</h3>
-<h3 id="toc_2.3.3">漏洞</h3>
+
+<h3 id="toc_2.3.1">功能：具备的漏洞</h3>
 <ul>
 <li>
 跨站点脚本攻击
@@ -74,8 +73,8 @@ java开发，支持linux，OS X Tiger，windows
 等等
 
 </ul>
-<h3 id="toc_2.3.4">演示</h3>
-<h3 id="toc_2.3.5">优缺点</h3>
+<h3 id="toc_2.3.2">演示</h3>
+<h3 id="toc_2.3.3">优缺点</h3>
 <ul>
 <li>
 结果检测太严格
@@ -132,6 +131,9 @@ java开发，支持linux，OS X Tiger，windows
 <li>
 可信状态
 
+<li>
+主体，客体标签
+
 </ul>
 <h3 id="toc_3.2.2">机制</h3>
 <p>
@@ -145,6 +147,23 @@ java开发，支持linux，OS X Tiger，windows
 <h2 id="toc_3.3">不足</h2>
 <p>
 动态比较难搞。。
+</p>
+
+<h1 id="toc_4">大师兄汇报论文进展</h1>
+<p>
+ROP威胁动态完整性（Return Oriented Program）
+</p>
+
+<p>
+方法1（可信领域外）：通过检测每一个return有无对应的函数头来判断这个return是否合法。
+</p>
+
+<p>
+方法2：程序编译后，抽出它的模块转移图，将图存起来，做一个状态机，当程序运行时，看看是否符合状态转移图的某一条路径，若不符合，则是被恶意更改的程序。
+</p>
+
+<p>
+自动化测试也是基于这个理论喔。
 </p>
 
       </div> 
