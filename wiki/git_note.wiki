@@ -1,0 +1,9 @@
+ =git使用积累=
+==git pull==
+git pull origin master命令，是把origin项目的master分支拉到本地，通常会默认放到缓存FETCH_HEAD中。
+
+此时，先git checkout FETCH_HEAD，再git checkout new_branch，可将缓存内容放到一个新分支new_branch上。
+
+==git merge==
+git merge branch_name命令，将名为branch_name的分支合并到当前分支。注意，只能新分支merge到旧分支，反之是不能merge成功的。
+

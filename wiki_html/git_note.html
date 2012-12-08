@@ -1,0 +1,42 @@
+  <head>
+    <link rel="stylesheet" type="text/css" href="/demo/stylesheet/style.css" />
+    <script type="text/javascript" src="/demo/jquery-1.4.2.min.js"></script>
+    <link rel="icon" href="/demo/mine.ico" type="image/x-icon">
+    <link rel="Shortcut Icon" href="/demo/mine.ico" type="image/x-icon">
+  </head>
+ 
+        <div id="all">
+<div id="header">
+    <ul id="top-nav">
+        <li>
+            <a href="/demo/index.html">首页</a>
+        </li>
+        <li>
+            <a href="/demo/wiki_html/notes.html">笔记</a>
+
+        </li>
+        <li>
+            <a href="/demo/wiki_html/diary.html">日记</a>
+        </li>
+    </ul>
+</div>
+  <body>
+      <div class="content">
+          
+<h1 id="toc_1" class="justcenter">git使用积累</h1>
+<h2 id="toc_1.1">git pull</h2>
+<p>
+git pull origin master命令，是把origin项目的master分支拉到本地，通常会默认放到缓存FETCH_HEAD中。
+</p>
+
+<p>
+此时，先git checkout FETCH_HEAD，再git checkout new_branch，可将缓存内容放到一个新分支new_branch上。
+</p>
+
+<h2 id="toc_1.2">git merge</h2>
+<p>
+git merge branch_name命令，将名为branch_name的分支合并到当前分支。注意，只能新分支merge到旧分支，反之是不能merge成功的。
+</p>
+
+      </div> 
+</body>
