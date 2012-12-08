@@ -1,5 +1,0 @@
-[[=try=]]
-==lets try==
-
-= Generated Links =
-    - [[index.html|首页]]
