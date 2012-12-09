@@ -5,18 +5,20 @@
     - [[vimwiki_jekyll|使用vimwiki和jekyll搭建方便编辑的wiki博客]]
     - [[/demo/wiki_html/integrity_check|论文笔记——Are Hardware Performance Counters a Cost Effective Way for Integrity Checking of Programs?]]
     - [[http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html|My reference]]
-
+= 经验笔记 =
+ - [[/demo/wiki_html/shell_note|shell学习笔记]]
+ - [[/demo/wiki_html/git_note|git使用中的经验总结（先挖坑，慢慢来）]]
 = 实验室讨论班记录 =
     - [[/demo/wiki_html/1130|11月30日记录——新人报告，webgoat,郅波哥哥访问控制]]
-= 网站收藏 =
+=  网站收藏 =
 == 实验室资源 ==
 - [[http://172.18.184.221/|wiki]]
 - [[http://172.18.184.59|web-index]]
-- [[http://172.18.184.220|ftp]]
+-  [[http://172.18.184.220|ftp]]
 == 产品相关 ==
 - [[http://www.36kr.com/|36氪   ]]     [[http://www.ifanr.com/|ifanr   ]]     [[http://cdc.tencent.com/|腾讯CDC   ]]    [[http://www.huxiu.com/|虎嗅网   ]]
 - [[http://www.pmtoo.com/|产品中国    ]]     [[http://event.geekpark.net/|极客公园]]
- 
+  
 == 有意思的 ==
 - [[http://fm.xinli001.com/|心理FM-世界和我爱着你]]
 - [[http://zhan.renren.com/home?checked=true|小站-告诉我你的梦想]]
