@@ -26,12 +26,18 @@
           
 <h1 id="toc_1" class="justcenter">tncfhh中使用到的协议梳理</h1>
 <p>
-<img src="/demo/pic/tnc.png" />
+<img src="/demo/pic/802.1x.png" />
+</p>
+
+<p>
 图解：在我们的实验中，配置交换机，启用802.1X认证。而在这个认证的框架中，请求者（supplicant）是露姐的机器（上面跑的客户端程序是wpa-supplicant），认证者是交换机，认证服务器是205那台机器（这个也是在交换机上配置的），上面跑的服务器端程序是被EAP-TNC打包过的freeradius。
 </p>
 <h2 id="toc_1.1">802.1x</h2>
 <p>
 <a href="http://en.wikipedia.org/wiki/IEEE_802.1X">维基百科-IEEE 802.1X</a>
+</p>
+
+<p>
 From wikipedia:IEEE 802.1X is an IEEE Standard for port-based Network Access Control (PNAC)。802.1X是一个工作在链路层的协议，基于端口选择是否可以连入互联网。
 </p>
 
@@ -43,9 +49,12 @@ From wikipedia:IEEE 802.1X is an IEEE Standard for port-based Network Access Con
 总的来说，802.1x是个认证框架。
 </p>
 
-<h2 id="toc_1.2">EAP</h2>
+<h2 id="toc_1.2" class="justcenter">EAP</h2>
 <p>
 <a href="http://en.wikipedia.org/wiki/Extensible_Authentication_Protocol">维基百科-Extensible Authentication Protocol</a>
+</p>
+
+<p>
 From wikipedia:EAP is an authentication framework, not a specific authentication mechanism.[1] It provides some common functions and negotiation of authentication methods called EAP methods. There are currently about 40 different methods defined.EAP也是个框架，可以承载各种认证方法（EAP方法），在我们的TNC实验中，实际上就是要创建EAP-TNC方法。
 </p>
 
@@ -65,9 +74,12 @@ EAP-TTLS：是EAP-TLS的拓展，通过互相查看数字证书（我们把客�
 EAP-MD5：提供最小的安全：MD5 哈希函数，容易遭受字典攻击，中间人攻击。只认证客户端，客户端不能对服务器进行认证，不是相互的。
 </p>
 
-<h2 id="toc_1.3">RADIUS</h2>
+<h2 id="toc_1.3" class="justcenter">RADIUS</h2>
 <p>
 <a href="http://en.wikipedia.org/wiki/RADIUS">维基百科-RADIUS（Remote Authentication Dial In User Service）</a>  <a href="http://tools.ietf.org/html/rfc2058">RFC</a>
+</p>
+
+<p>
 From wikipedia:Remote Authentication Dial In User Service (RADIUS) is a networking protocol that provides centralized Authentication, Authorization, and Accounting (AAA) management for computers to connect and use a network service.里面存有来自各客户端的认证数据。 
 </p>
 
