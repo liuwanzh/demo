@@ -11,7 +11,7 @@ From wikipedia:IEEE 802.1X is an IEEE Standard for port-based Network Access Con
 
 总的来说，802.1x是个认证框架。
 
- ==EAP==
+==EAP==
 [[http://en.wikipedia.org/wiki/Extensible_Authentication_Protocol|维基百科-Extensible Authentication Protocol]]
 
 From wikipedia:EAP is an authentication framework, not a specific authentication mechanism.[1] It provides some common functions and negotiation of authentication methods called EAP methods. There are currently about 40 different methods defined.EAP也是个框架，可以承载各种认证方法（EAP方法），在我们的TNC实验中，实际上就是要创建EAP-TNC方法。
@@ -24,7 +24,7 @@ EAP-TTLS：是EAP-TLS的拓展，通过互相查看数字证书（我们把客�
 
 EAP-MD5：提供最小的安全：MD5 哈希函数，容易遭受字典攻击，中间人攻击。只认证客户端，客户端不能对服务器进行认证，不是相互的。
 
- ==RADIUS==
+==RADIUS==
 [[http://en.wikipedia.org/wiki/RADIUS|维基百科-RADIUS（Remote Authentication Dial In User Service）]]  [[http://tools.ietf.org/html/rfc2058|RFC]]
 
 From wikipedia:Remote Authentication Dial In User Service (RADIUS) is a networking protocol that provides centralized Authentication, Authorization, and Accounting (AAA) management for computers to connect and use a network service.里面存有来自各客户端的认证数据。 
