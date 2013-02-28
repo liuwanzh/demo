@@ -11,45 +11,45 @@ title: 我的Blog
 
     var i=0;
     $(document).ready(function(){
-        function change(){
+            function change(){
 
             if(i<1)
             {
 
-                $("[src='" + pics[i] + "']").fadeOut("slow");
-                $("[src='"+pics[i+1] + "']").fadeIn("slow");
-                i+=1;
+            $("[src='" + pics[i] + "']").fadeOut("slow");
+            $("[src='"+pics[i+1] + "']").fadeIn("slow");
+            i+=1;
             }
             else
             {
-                $("[src='" + pics[i] + "']").fadeOut("slow");
-                $("[src='"+pics[0]+"']").fadeIn("slow");
-                i=0;
+            $("[src='" + pics[i] + "']").fadeOut("slow");
+            $("[src='"+pics[0]+"']").fadeIn("slow");
+            i=0;
             }
-        }<!--change-->
+            }<!--change-->
 
-        setInterval(change,3000);
+            setInterval(change,3000);
 
-    })
-</script>
+            })
+        </script>
 
 
         <div class="content">
-            <h1 align="center">Never Mind,小真</h1>
+            <h1 align="center">Mary says she's gonna be OK.</h1>
             <div id="picture">
-            <img id="index" src="/demo/pic/1.jpg"> </img>
-            <img id="index" src="/demo/pic/2.jpg" style="display:none"> </img>
-        </div>
+                <img id="index" src="/demo/pic/1.jpg"> </img>
+                <img id="index" src="/demo/pic/2.jpg" style="display:none"> </img>
+            </div>
 
             <script type="text/javascript">
                 var myDate =new Date();
                 var day = myDate.getDate();
                 var month= myDate.getMonth()+1;
-                var year= myDate.getYear() + 1900;
+                var year= 2013;
                 document.write(' <div id = "date"> <p align="right"> <font color="#ADADAD" size="6">'+ year + '.&nbsp' + month + '&nbsp.&nbsp' + '</font><font id="day" color="#FF3377" size="10" style="font-weight:600">'+day+'</font></p>');
                 </script>
 
                 <div id="diary"> <p> <font size="3" color="white">&nbsp&nbsp&nbsp 放了一个长长的寒假，坚持跑步，时刻提醒自己锻炼身体，并努力完成2012的最后一个愿望。身体真的很重要。这个世界上唯一比我的身体更重要的，就是我爸妈的身体了。</font></p> </div> </div>
-        <h6 align="center">Contact me via:liuwanzh@qq.com</h6>
-    </div>
+            <h6 align="center">Contact me via:liuwanzh@qq.com</h6>
+        </div>
 
