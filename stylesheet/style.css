@@ -488,9 +488,9 @@ div#picture {display:inline-block;vertical-align:top;padding:30px 100px 40px 20p
 
 img#index {position:absolute;margin-left:0px;margin-top:10px;max-height:550px;max-width:660px;}
 
-div#date {display:inline-block;margin:60px 0 20px 0;vertical-align:top;width:250px;height:350px;}
+div#date {display:inline-block;margin:20px 0 20px 0;vertical-align:top;width:200px;height:350px;}
 
-div#diary {border:solid,10px,#FF0000;display:inline-block;border-radius:10px;width:275px;height:130px;margin-left:20px;padding:20px;margin-right:20px;}
+div#diary {display:inline-block;border-radius:10px;width:275px;height:130px;margin-left:20px;padding:20px;margin-right:20px;}
 
 div#content {margin-left:auto;margin-right:auto;width:500;}
 /*整个大框*/
