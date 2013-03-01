@@ -483,16 +483,16 @@ div.gsc-clear-button {
 
 
 
-div#picture {display:inline-block;vertical-align:top;padding:30px 100px 40px 20px;width:400px;height:350px;border:3px,solid,black;}
+div#picture {float:left;display:inline-block;vertical-align:top;padding:30px 100px 40px 20px;width:400px;height:350px;border:3px,solid,black;}
 
 
 img#index {position:absolute;margin-left:0px;margin-top:10px;max-height:350px;max-width:550px;}
 
-div#date {display:inline-block;margin:20px 0 20px 0;vertical-align:top;width:255px;height:230px;}
+div#date {float:right;display:inline-block;margin:20px 0 20px 0;vertical-align:top;width:255px;height:230px;}
 
 div#diary {display:inline-block;border:1px solid white;border-radius:10px;width:275px;height:175px;margin-left:40px;padding:20px;margin-right:20px;}
 
-div#content {margin-left:auto;margin-right:auto;width:500;}
+div#content {margin-left:auto;margin-right:auto;width:850;}
 /*整个大框*/
 div.calendar {
 margin-left:30px;
