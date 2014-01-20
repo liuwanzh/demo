@@ -83,51 +83,51 @@ body {
 
 
 .container_12 .grid_1 {
-	width:6.3%;
+	width:77px;
 }
 
 .container_12 .grid_2 {
-	width:14.7%;
+	width:178px;
 }
 
 .container_12 .grid_3 {
-	width:23%;
+	width:279px;
 }
 
 .container_12 .grid_4 {
-	width:31%;
+	width:380px;
 }
 
 .container_12 .grid_5 {
-	width:39.7%;
+	width:481px;
 }
 
 .container_12 .grid_6 {
-	width:48%;
+	width:582px;
 }
 
 .container_12 .grid_7 {
-	width:56.4%;
+	width:683px;
 }
 
 .container_12 .grid_8 {
-	width:64.7%;
+	width:784px;
 }
 
 .container_12 .grid_9 {
-	width:73%;
+	width:885px;
 }
 
 .container_12 .grid_10 {
-	width:81.4%;
+	width:986px;
 }
 
 .container_12 .grid_11 {
-	width:89.7%;
+	width:1087px;
 }
 
 .container_12 .grid_12 {
-	width:98%;
+	width:1188px;
 }
 
 
