@@ -23,7 +23,7 @@ a[href^="tel:"] {
 
 body {
 	position: relative;
-	min-width: 1263px;
+/*	min-width: 1263px;*/
     background-color: #f8f8f8;
     color: #6e6b6e;
     font: 14px/20px 'Open Sans', sans-serif;
@@ -294,7 +294,7 @@ header h1 a img {
 }
 
 .slogan {
-    padding: 73px 0 76px;
+    padding: 30px 0 0px;
     text-align: center;
     color: #24124d;
     font: 60px/60px 'Open Sans', sans-serif;
