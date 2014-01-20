@@ -4,7 +4,7 @@
 @import "superfish.css";
 
 html {
-	width: 100%;
+/*	width: 100%;*/
 
 }
 
@@ -213,7 +213,7 @@ a:hover {
 /*header*/
 
 .main {
-    width: 1080px;
+   /* width: 1080px;*/
     margin: 0 auto;
     background-color: #fff;
 }
@@ -339,7 +339,7 @@ header h1 a img {
 }
 
 .page1 .content {
-   padding: 88px 0 93px;
+   padding: 40px 0 93px;
 }
 
 .col1 {
