@@ -23,7 +23,7 @@ a[href^="tel:"] {
 
 body {
 	position: relative;
-/*	min-width: 1263px;*/
+   	min-width: 100%;
     background-color: #f8f8f8;
     color: #6e6b6e;
     font: 14px/20px 'Open Sans', sans-serif;
@@ -213,7 +213,7 @@ a:hover {
 /*header*/
 
 .main {
-   /* width: 1080px;*/
+    width: 89.1%;
     margin: 0 auto;
     background-color: #fff;
 }
@@ -244,7 +244,7 @@ header h1 {
 header h1 a {
 	display: inline-block;
 	overflow: hidden;
-	/*width: 114px;*/
+	width: 9.4%;
     height: 130px;
 	font-size: 0;
 	line-height: 0;
@@ -329,7 +329,7 @@ header h1 a img {
 
 .cont_wrapper {
     background-color: #f6f4f6;
-    /*width: 1263px;*/
+    width: 100%;
     padding-bottom: 88px;
     margin: -1px auto 0;
 }
@@ -469,7 +469,7 @@ ul.list.l1 li+li {
 }
 
  address dd span {
-	/*min-width: 102px;*/
+	min-width: 8.4%;
 	display: inline-block;
 	text-align: left;
 }
@@ -545,7 +545,7 @@ footer ul li+li {
     float: left;
     background-color: #bb95c6;
     display: block;
-    /*width: 56px;*/
+    width: 4.6%;
     text-align: center;
     height: 54px;
     color: #fff;
