@@ -26,7 +26,8 @@ body {
    	min-width: 100%;
     background-color: #f8f8f8;
     color: #6e6b6e;
-    font: 0.875em/1.25em 'Open Sans', sans-serif;
+    /*font: 0.875em/1.25em 'Open Sans', sans-serif;*/
+    font:normal 100% 'Open Sans', sans-serif;
 }
 
 .ic {
