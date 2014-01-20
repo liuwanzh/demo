@@ -244,7 +244,7 @@ header h1 {
 header h1 a {
 	display: inline-block;
 	overflow: hidden;
-	width: 114px;
+	/*width: 114px;*/
     height: 130px;
 	font-size: 0;
 	line-height: 0;
@@ -329,7 +329,7 @@ header h1 a img {
 
 .cont_wrapper {
     background-color: #f6f4f6;
-    width: 1263px;
+    /*width: 1263px;*/
     padding-bottom: 88px;
     margin: -1px auto 0;
 }
@@ -469,7 +469,7 @@ ul.list.l1 li+li {
 }
 
  address dd span {
-	min-width: 102px;
+	/*min-width: 102px;*/
 	display: inline-block;
 	text-align: left;
 }
@@ -545,7 +545,7 @@ footer ul li+li {
     float: left;
     background-color: #bb95c6;
     display: block;
-    width: 56px;
+    /*width: 56px;*/
     text-align: center;
     height: 54px;
     color: #fff;

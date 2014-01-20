@@ -1,0 +1,87 @@
+  <head>
+    <link rel="stylesheet" type="text/css" href="/demo/stylesheet/style.css" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="/demo/jquery-1.4.2.min.js"></script>
+    <link rel="icon" href="/demo/mine.ico" type="image/x-icon">
+    <link rel="Shortcut Icon" href="/demo/mine.ico" type="image/x-icon">
+  </head>
+ 
+        <div id="all">
+<div id="header">
+    <ul id="top-nav">
+        <li>
+            <a href="/demo/index.html">首页</a>
+        </li>
+        <li>
+            <a href="/demo/wiki_html/notes.html">笔记</a>
+
+        </li>
+        <li>
+            <a href="/demo/diary_index.html">小感</a>
+        </li>
+    </ul>
+</div>
+  <body>
+      <div class="content">
+          
+<h1 id="toc_1" class="justcenter">tncfhh中使用到的协议梳理</h1>
+<p>
+<img src="/demo/pic/802.1x.png" />
+</p>
+
+<p>
+图解：在我们的实验中，配置交换机，启用802.1X认证。而在这个认证的框架中，请求者（supplicant）是露姐的机器（上面跑的客户端程序是wpa-supplicant），认证者是交换机，认证服务器是205那台机器（这个也是在交换机上配置的），上面跑的服务器端程序是被EAP-TNC打包过的freeradius。
+</p>
+<h2 id="toc_1.1">802.1x</h2>
+<p>
+<a href="http://en.wikipedia.org/wiki/IEEE_802.1X">维基百科-IEEE 802.1X</a>
+</p>
+
+<p>
+From wikipedia:IEEE 802.1X is an IEEE Standard for port-based Network Access Control (PNAC)。802.1X是一个工作在链路层的协议，基于端口选择是否可以连入互联网。
+</p>
+
+<p>
+802.1X包括三个部分，请求方（supplicant），认证者（authenticator），认证服务器（authentication server）。请求方通常是指客户端电脑（硬件）以及客户端软件（软件），在我们的TNC实验中，使用的是wpa-supplicant，而像我们的互联网，则是那个inode客户端;认证者通常是指二层交换机；认证服务器则是服务器端计算机（硬件）以及服务器软件（软件），在TNC实验中，使用的是经过了改动的freeradius。
+</p>
+
+<p>
+总的来说，802.1x是个认证框架。
+</p>
+
+<h2 id="toc_1.2">EAP</h2>
+<p>
+<a href="http://en.wikipedia.org/wiki/Extensible_Authentication_Protocol">维基百科-Extensible Authentication Protocol</a>
+</p>
+
+<p>
+From wikipedia:EAP is an authentication framework, not a specific authentication mechanism.[1] It provides some common functions and negotiation of authentication methods called EAP methods. There are currently about 40 different methods defined.EAP也是个框架，可以承载各种认证方法（EAP方法），在我们的TNC实验中，实际上就是要创建EAP-TNC方法。
+</p>
+
+<p>
+而所谓的EAPoL，则是EAP over LAN，也就是the encapsulation of EAP over IEEE 802，即在802.1X的框架下使用EAP方法。以下列举几个我们遇到的EAP方法：
+</p>
+
+<p>
+EAP-TLS：使用数字证书来保护radius认证，其实就是客户端和服务器互相对各自的证书进行认证。
+</p>
+
+<p>
+EAP-TTLS：是EAP-TLS的拓展，通过互相查看数字证书（我们把客户端的证书拷贝到服务器上，为的就是这个）后，建立一条安全通道，接下来可以使用其他的方法继续进行认证（此时会话没有完成）。根据时涛看到的RFC的某句话，每一个认证只能使用一次EAP会话，而一次EAP会话可以使用多种方法。换句话说，我们使用EAP-TTLS，先用EAP-MD5，然后会话是没有结束的，再用EAP-TNC完成EAP认证。而所谓的安全通道，则是指我们在应用层编写一些send和recv，TLS帮我们进行加密解密。
+</p>
+
+<p>
+EAP-MD5：提供最小的安全：MD5 哈希函数，容易遭受字典攻击，中间人攻击。只认证客户端，客户端不能对服务器进行认证，不是相互的。
+</p>
+
+<h2 id="toc_1.3">RADIUS</h2>
+<p>
+<a href="http://en.wikipedia.org/wiki/RADIUS">维基百科-RADIUS（Remote Authentication Dial In User Service）</a>  <a href="http://tools.ietf.org/html/rfc2058">RFC</a>
+</p>
+
+<p>
+From wikipedia:Remote Authentication Dial In User Service (RADIUS) is a networking protocol that provides centralized Authentication, Authorization, and Accounting (AAA) management for computers to connect and use a network service.里面存有来自各客户端的认证数据。 
+</p>
+
+      </div> 
+</body>

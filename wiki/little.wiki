@@ -1,0 +1,2 @@
+=使用python快速搭建http服务器=
+只需要在你需要共享的文件夹下面，输入python -m SimpleHTTPServer 8000 ,那么在浏览器地址栏输入ip:8000就进入了共享文件夹页面了。

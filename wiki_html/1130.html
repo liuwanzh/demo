@@ -1,0 +1,167 @@
+  <head>
+    <link rel="stylesheet" type="text/css" href="/demo/stylesheet/style.css" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="/demo/jquery-1.4.2.min.js"></script>
+    <link rel="icon" href="/demo/mine.ico" type="image/x-icon">
+    <link rel="Shortcut Icon" href="/demo/mine.ico" type="image/x-icon">
+  </head>
+ 
+        <div id="all">
+<div id="header">
+    <ul id="top-nav">
+        <li>
+            <a href="/demo/index.html">首页</a>
+        </li>
+        <li>
+            <a href="/demo/wiki_html/notes.html">笔记</a>
+
+        </li>
+        <li>
+            <a href="/demo/diary_index.html">小感</a>
+        </li>
+    </ul>
+</div>
+  <body>
+      <div class="content">
+          
+<h1 id="toc_1">新人介绍</h1>
+<p>
+潘阳，林瀚，李金峰，陈图嘉，张志斌
+</p>
+<h1 id="toc_2">梦君师姐</h1>
+<h2 id="toc_2.1">渗透测试实验环境一览</h2>
+<p>
+Web Pentest
+War Game
+Insecure Distribution
+</p>
+<h2 id="toc_2.2">OWASP组织</h2>
+<p>
+组织：OWASP Open Web Application Security Project
+</p>
+ 
+<h2 id="toc_2.3">Webgoat</h2>
+<p>
+一个用于支持网络安全课程的软件？
+</p>
+
+<p>
+java开发，支持linux，OS X Tiger，windows
+</p>
+
+<h3 id="toc_2.3.1">功能：具备的漏洞</h3>
+<ul>
+<li>
+跨站点脚本攻击
+
+<li>
+访问控制
+
+<li>
+县城安全
+
+<li>
+操作隐藏字段
+
+<li>
+弱会话
+
+<li>
+等等
+
+</ul>
+<h3 id="toc_2.3.2">演示</h3>
+<h3 id="toc_2.3.3">优缺点</h3>
+<ul>
+<li>
+结果检测太严格
+
+<li>
+能利用的漏洞有限
+
+</ul>
+<p>
+优点：
+</p>
+<ul>
+<li>
+可拓展性
+
+<ul>
+<li>
+添加课程方便
+
+</ul>
+</ul>
+<h2 id="toc_2.4">Gruyere简介</h2>
+<p>
+一个web安全实验平台
+</p>
+
+<h1 id="toc_3">郅波师兄汇报论文进展</h1>
+<p>
+已经写到wiki上了哈
+</p>
+<h2 id="toc_3.1">基础知识</h2>
+<p>
+听到的关键词：可信链；静态度量，动态很少；
+</p>
+
+<p>
+缺陷：
+</p>
+<ul>
+<li>
+缺乏主题及客体静态完整性的保证
+
+<li>
+缺乏可信性状态的转移
+
+<li>
+工程实现上存在自身完整性难以保证的缺陷
+
+</ul>
+
+<h2 id="toc_3.2">具体的一些东西</h2>
+<h3 id="toc_3.2.1">扩展标签</h3>
+<ul>
+<li>
+可信状态
+
+<li>
+主体，客体标签
+
+</ul>
+<h3 id="toc_3.2.2">机制</h3>
+<p>
+具体的状态转移机制～～～
+</p>
+<h3 id="toc_3.2.3">实现</h3>
+<p>
+基于相对简单的Smack扩展实现
+</p>
+
+<h2 id="toc_3.3">不足</h2>
+<p>
+动态比较难搞。。
+</p>
+
+<h1 id="toc_4">大师兄汇报论文进展</h1>
+<p>
+ROP威胁动态完整性（Return Oriented Program）
+</p>
+
+<p>
+方法1（可信领域外）：通过检测每一个return有无对应的函数头来判断这个return是否合法。
+</p>
+
+<p>
+方法2：程序编译后，抽出它的模块转移图，将图存起来，做一个状态机，当程序运行时，看看是否符合状态转移图的某一条路径，若不符合，则是被恶意更改的程序。
+</p>
+
+<p>
+自动化测试也是基于这个理论喔。
+</p>
+
+      </div> 
+</body>

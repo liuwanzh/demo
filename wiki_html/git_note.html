@@ -1,0 +1,72 @@
+  <head>
+    <link rel="stylesheet" type="text/css" href="/demo/stylesheet/style.css" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="/demo/jquery-1.4.2.min.js"></script>
+    <link rel="icon" href="/demo/mine.ico" type="image/x-icon">
+    <link rel="Shortcut Icon" href="/demo/mine.ico" type="image/x-icon">
+  </head>
+ 
+        <div id="all">
+<div id="header">
+    <ul id="top-nav">
+        <li>
+            <a href="/demo/index.html">首页</a>
+        </li>
+        <li>
+            <a href="/demo/wiki_html/notes.html">笔记</a>
+
+        </li>
+        <li>
+            <a href="/demo/diary_index.html">小感</a>
+        </li>
+    </ul>
+</div>
+  <body>
+      <div class="content">
+          
+<h1 id="toc_1" class="justcenter">git使用积累</h1>
+<h2 id="toc_1.1">git pull</h2>
+<p>
+git pull origin master命令，是把origin项目的master分支拉到本地，通常会默认放到缓存FETCH_HEAD中。
+</p>
+
+<p>
+此时，先git checkout FETCH_HEAD，再git checkout new_branch，可将缓存内容放到一个新分支new_branch上。
+</p>
+
+<p>
+git pull在官方文档中的描述：
+</p>
+<pre>
+git pull is shorthand for git fetch followed by git merge FETCH_HEAD.
+More precisely, git pull runs git fetch with the given parameters and calls git merge to merge the retrieved branch heads into the current branch.
+</pre>
+<p>
+即git pull = git fetch+git merge FETCH_HEAD。
+</p>
+
+<p>
+会自动地覆盖到目前的项目分支上。挖坑问题：如果出现pull过来的内容与本地分支有冲突，如何处理？
+</p>
+
+<h3 id="toc_1.1.1">总之</h3>
+<p>
+要在宿舍和实验室同步一个项目的话，则每一次在一个地方使用时，首先git pull origin master（当然不一定是master），然后才能做新东西并成功commit。
+</p>
+<h2 id="toc_1.2">git merge</h2>
+<p>
+git merge branch_name命令，将名为branch_name的分支合并到当前分支。注意，只能新分支merge到旧分支，反之是不能merge成功的。
+</p>
+<h2 id="toc_1.3">git ignore</h2>
+<p>
+在项目根目录下创建.gitignore文件，上面列举需要git忽略的文件名或文件匹配。例如：
+</p>
+<pre>
+*.o
+*.swp
+等等这样
+}i}
+</pre>
+
+      </div> 
+</body>

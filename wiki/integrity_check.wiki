@@ -1,0 +1,35 @@
+=使用HPC硬件来协助检测进程完整性=
+用HPC记录以下的要素：
+* INS：the total number of instructions
+* BR:the number of branch instructions
+* FP:Floating point count
+* FN:
+* IO:就是IO
+等等
+
+举个例子，对于某一个control flow graph(CFG)，它上面的所有合法路径，我们可以遇到最多7条分支，而我们在runtime时发现了9条分支，则认为程序被恶意更改了。
+
+the main advantage of our technique is that does not require additional hardware or ISA modifications.
+==静态==
+
+验证步骤：
+===1.Profiling at installation time===
+在安装的过程中，可信的OS使用一个选好的input来运行被测试的程序，从HPC收集上面提到的那些元素，与程序binary保存到一起。攻击者不知道用于之前选好的input是什么。
+===2.Profiling at check time===
+任何时候当用户要运行程序的时候，则把刚刚的选中input再代入，再收集一次HPC里的元素，进行比对。
+不要求完全准确，保证差异在5%内。
+ 
+==动态==
+验证步骤：
+===1.Profiling===
+与静态的第一个步骤类似，区别在于需要在整个excution的过程中，统计所有的HPC记录的元素。（大量）
+===2.Model building===
+就是根据刚刚记录的东西进行数学建模啦。
+===3.Runtime checking===
+就计算HPC记录的元素，看是否符合上面所建的模型。
+
+感觉很依赖于数学模型。动态的方法是在被测试的程序实际运行之前，先取很多的samples来进行统计，得到一个模型，比如说得出INS和FN的线性关系，WR和IO的线性关系，等等。（当然这个模型需要经过测试，使得未被更改的程序始终能满足这个模型）
+
+然后实际上execute的时候，则看看测出来的这些要素是否符合这个模型，是否超过某个阈值，来判断程序是否被modify。
+
+
