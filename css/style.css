@@ -111,9 +111,9 @@ ul {
 
 
 ul.list li {
-    font-size: 20px;
+    font-size: 1em;
     color: #17063c;
-    padding-left: 22px;
+    padding-left: 20%;
     background: url(../images/marker.png) 0 9px no-repeat;
 }
 
