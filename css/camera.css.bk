@@ -30,12 +30,12 @@
 
 
 .camera_wrap img {
-	max-width: 100%;
+	max-width: 10000px;
 }
 
 .camera_fakehover {
 	height: 100%;
-	min-height: 6%;
+	min-height: 60px;
 	position: relative;
 	width: 100%;
 }
@@ -290,10 +290,11 @@
 
 .camera_pag  {
 	display: block;
-	width: 6%;
-	right: 46%;
-	bottom: 15%;
-	height: 1.6%;
+	position: absolute;
+	width: 65px;
+	right: 460px;
+	bottom: 146px;
+	height: 16px;
 	overflow: hidden;
 	float: left;	
 	z-index: 999;

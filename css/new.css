@@ -1,0 +1,143 @@
+body {
+	background-color: #cebbd6;
+	margin-left:0;
+	margin-right:0;
+}
+.main_color {
+	margin-bottom:7%;
+}
+
+a {
+text-decoration:none;
+}
+
+#notes_name li a {
+font-size:0.5em;
+color:rgb(36,18,77);
+margin:0;
+}
+
+#notes_name li {
+list-style:none;
+padding-left:5%;
+padding-top:0;
+padding-bottom:0;
+background: url(../images/marker.png) 0 40% no-repeat;
+}
+
+ul#notes_name {
+padding-left:3%;
+}
+#menu{
+padding-top:5%;
+padding-bottom:5%;
+}
+
+#notes_head {
+font-size:0.6em;
+color:rgb(154,19,86)
+padding-left:5%;
+padding-top:0;
+padding-right:0;
+}
+
+#notes_head p{
+color:rgb(154,19,86)
+}
+
+#menu {
+padding-left:0;
+font-size: 0.6em;
+}
+
+/*ul#notes_name{
+padding-top:0;
+padding-bottom:0;
+margin-top:0;
+margin-bottom:0;
+}*/
+
+#menu li{
+list-style-image: none;
+list-style-type: none;
+float: left;
+width:25%;
+}
+#menu li a{
+text-decoration: none;
+margin: 0px;
+color:rgb(224,96,145);
+padding-top: 1%;
+display: block; /* 作为一个块 */
+padding-right: 5%; /* 设置块的属性 */
+padding-bottom: 1%;
+padding-left: 5%;
+text-align:center;
+}
+
+.notes_menu {
+padding-top:5%;
+padding-bottom:10%;
+padding-left:2%;
+padding-right:5%;
+margin:8% 2% 2% 2%;
+background-color:white;
+}
+
+#picture {
+text-align:center;
+}
+img#index {
+margin-left:0;
+margin-right:0;
+max-height:55%;max-width:100%;}
+
+.slogan {
+padding:2% 0 5%;
+color:rgb(36,18,77);
+font-size:1em;
+text-align:center;
+}
+
+.banner {
+width:100%
+text-align:center;
+}
+.banner1 {
+margin:5% 1% 5% 1%;
+background-color:rgb(193,115,177);
+float:left;
+width:31%;
+}
+.banner2 
+{
+margin:5% 1% 5% 1%;
+float:left;
+background-color:rgb(142,128,166);
+width:31%;
+}
+.banner3 {
+margin:5% 1% 5% 1%;
+float:left;
+background-color:rgb(154,19,86);
+width:31%;
+}
+.maxheight{
+display:block;
+text-align:center;
+padding:15% 0 15%;
+color:rgb(255,255,255);
+font-size:0.5em;
+height:50%;
+}
+
+.banner_pic {
+margin-left:0px;margin-top:0;max-height:30%;max-width:100%;
+}
+
+.contact {
+font-size:0.5em;
+color:rgb(224,96,145);
+padding-left:2%;
+padding-height:10%;
+}
