@@ -14,7 +14,6 @@ text-decoration:none;
 }
 
 #notes_name li a {
-font-size:0.5em;
 color:rgb(36,18,77);
 margin:0;
 }
@@ -31,10 +30,6 @@ list-style:square;
 padding-left:10%;
 padding-top:0;
 padding-bottom:0;
-}
-
-ul#notes_name {
-padding-left:3%;
 }
 #menu{
 padding-top:5%;
@@ -175,6 +170,10 @@ color:rgb(224,96,145);
 .jianlineirong {
 font-size:0.6em;
 padding-left:5%;
+}
+.notes_detail {
+font-size:0.6em;
+padding-left:0;
 }
 #basic2 {
 float:left;
