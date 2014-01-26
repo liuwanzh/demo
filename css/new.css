@@ -18,13 +18,19 @@ font-size:0.5em;
 color:rgb(36,18,77);
 margin:0;
 }
-
 #notes_name li {
 list-style:none;
 padding-left:5%;
 padding-top:0;
 padding-bottom:0;
 background: url(../images/marker.png) 0 40% no-repeat;
+
+}
+#class2 {
+list-style:square;
+padding-left:10%;
+padding-top:0;
+padding-bottom:0;
 }
 
 ul#notes_name {
