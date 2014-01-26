@@ -53,12 +53,9 @@ padding-left:0;
 font-size: 0.6em;
 }
 
-/*ul#notes_name{
-padding-top:0;
-padding-bottom:0;
-margin-top:0;
-margin-bottom:0;
-}*/
+ul#notes_name{
+padding-left:2%;
+}
 
 #menu li{
 list-style-image: none;
