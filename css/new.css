@@ -204,6 +204,10 @@ font-size:1em;
 text-align:center;
 color:rgb(224,96,145);
 }
+.diary_page h4 {
+font-size:0.55em;
+text-align:left;
+}
 .diary_page h2 {
 font-size:0.6em;
 text-align:center;

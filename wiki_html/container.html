@@ -1,0 +1,58 @@
+<! DOCTYPE html>
+<html>
+<head>
+<title>Liuwanzhen's</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="../css/new.css">
+<link rel="shortcut icon" href="images/mine.ico"/>
+</head>
+
+<body class="diary_page">
+<div class="main_color">
+
+<ul id="menu">
+	<li><a href="../index.html">首页</a></li>
+        <li><a href="../aboutme.html">我</a></li>
+        <li><a href="../notes_new.html">笔记</a></li>
+        <li><a href="../diary_index.html">随笔</a></li>
+</ul>
+
+<div class="diary_content">
+<h1>C++中的各种容器总结</h1>
+
+<h2><br>map</h2>
+<p>
+map是关联性的容器，自动建立key对value的对应。使用map需要#include<map>。
+</p>
+<h4>1.定义</h4>
+<p>
+map&ltkeyType,valueType&gt mapname;例如map&ltint,string&gt student创建了一个student的map，其键值为int，value值为string。
+</p>
+<h4>2.插入</h4>
+<p>
+方法1：可以直接student[1]="liu"，这样的做法首先会检查student中是否有key为1的项，如果没有，则先新建一个key为1的项但value为缺省值，然后再为其赋值为“liu”。
+</p>
+<p>
+方法2：student.insert(map &lt int,string &gt::valuetype(2,"Guo"));没有前面的效率问题。
+</p>
+<p>
+任何类型（包括vector）都可以作为map的key和value，但是，作为key的类型必须重载了operator小于号，否则会报错。
+</p>
+<h4>3.查找是否含有key为特定值的项</h4>
+<p>
+map &lt int,string &gt iterator it = student.find(2); //查找key为2的项。<br>
+if(it==student.end()){ not found } <br>
+else {found,返回的iterator实际上是一个pair，it->first为key，it->second为value
+</p>
+<h4>4.删除</h4>
+<p>
+iterator erase(iterator it); //通过一个条目对象删除 <br>
+iterator erase(iterator first, iterator last); //删除一个范围 <br>
+size_type erase(const Key& key); //通过关键字删除 <br>
+clear()就相当于 enumMap.erase(enumMap.begin(), enumMap.end()); <br>
+</p>
+</div>
+</div>
+</body>
