@@ -1,0 +1,68 @@
+<! DOCTYPE html>
+<html>
+<head>
+<title>Liuwanzhen's</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="../css/new.css">
+<link rel="shortcut icon" href="images/mine.ico"/>
+</head>
+
+<body class="diary_page">
+<div class="main_color">
+
+<ul id="menu">
+	<li><a href="../index.html">首页</a></li>
+        <li><a href="../aboutme.html">我</a></li>
+        <li><a href="../notes_new.html">笔记</a></li>
+        <li><a href="../diary_index.html">随笔</a></li>
+</ul>
+
+<div class="diary_content">
+<h1>从一道网易笔试题总结出的C++技巧</h1>
+
+<p>
+题目链接：https://app.yinxiang.com/shard/s6/sh/3e4110ef-31c9-422d-8e92-6b02cfcf4fa5/1ce14aa53deb10c6cf1aa8b4ca4795d4<br>
+这是网易游戏测试岗位某年的笔试题，认真把它实现一下，能总结出挺多C++编程类和对象相关的技巧和经验。以下记录。
+</p>
+<h4>1.类图</h4>
+<p>
+该题实现的类图如下。
+</p>
+<h4>2.面向对象的真谛</h4>
+<p>
+在我不断修改程序的过程中，发现面向对象其实是非常有道理的，它与我们日常生活中的思考方式非常吻合。比如，题目中有一个命令是talk NPC，需要输出该NPC的对话。这种情况下我们应该想到，对话是NPC发出的，所以比较合乎常理的处理方式是：首先获取到说话的NPC对象，然后调用NPC的成员函数talk()，让它说话。这样可读性更强，封装性更好。而不是“自作主张”地去cout出来NPC说的话。
+</p>
+<p>
+当然还有一些复杂一点的函数，比如对于命令sell NPC goods,也就是向某一个NPC出售某一种物品。同样回归我们日常生活中的思考方式，sell这个动作固然是玩家发出的，所以sell函数应该作为Player类的成员函数。<br>
+sell函数包括以下几个步骤：1.判断玩家是否有指定的物品；2.判断当前所在房间是否有指定的NPC；3.判断该NPC是否需要该物品；4.玩家出售（金钱增加，背包减轻）。<br>
+其中1是Player的成员函数，2是Room的成员函数，3是NPC的成员函数，4则是Player的成员函数。每一个类必须各施其职。
+</p>
+<h4>3.传值调用，传引用调用，传址调用</h4>
+<p>
+以getNpc函数为例。该函数通过第二个参数——一个NPC名字，将返回的NPC赋值到第一个参数中。
+1.传值：声明：getNpc(Npc n,string name)；调用：getNpc(npc,npcName)<br>
+不可行。因为参数被保存在栈中，在函数结束后，栈空间被释放了。所以被赋值的npc又恢复了原值。<br>
+2.传引用：声明：getNpc(Npc &n,string name);调用：getNpc(npc,npcName)<br>
+可行。此时引用n指向对象npc，一直都是。那么getNpc实际上修改了引用n所指向的对象的值，换言之，npc被修改了。<br>
+3.传地址：声明：getNpc(Npc *n,string name);调用：getNpc(&n,npcName)<br>
+可行。此时传入函数的是参数的地址，函数中修改的是地址指向的值，所以当函数结束以后，栈空间被释放。但释放掉的仅仅是储存地址值的变量，实际上地址指向的值已经被改变了。<br>
+当函数参数在函数中需要被改变时，必须按引用调用。注意，一些比较大的对象作为参数时，即使函数不改变它，也尽量把它写成按引用调用。这样可以提高效率，因为执行时不需要进行大对象的拷贝！
+4.关于返回值。与参数类似，都是一个拷贝值。某些情况下必须返回地址（或引用）。例如在Building类的成员函数Room & getRoom(int num)中，如果没有&，那么Room r=getRoom(3)里，r将是Building里房间的一个拷贝值。如果进一步要对房间做操作，比如r.addNpc("xx")，那么操作的是这个拷贝值而不是Building里的房间，导致错误。同理，也可以返回地址Room * getRoom(int num).调用时Room *r = getRoom(3);(*r).addNpc("xx")。
+</p>
+<h4>4.iterator</h4>
+<p>
+举例：<br>
+vector<Room> rooms;<br>
+vector<Room>::iterator itr;<br>
+for(itr=rooms.begin();itr!=end();itr++)<br>
+{ (*itr)相当与一个Room。若要删除一项，则erase(itr) }
+</p>
+<h2>总结</h2>
+<p>
+总之，在书写类的时候，时刻想到，提供给前端的调用接口是否方便。如果到时侯要修改底层，尽量前端可以不做修改。
+</p>
+</div>
+</div>
+</body>
