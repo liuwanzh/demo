@@ -53,6 +53,34 @@ iterator erase(iterator first, iterator last); //删除一个范围 <br>
 size_type erase(const Key& key); //通过关键字删除 <br>
 clear()就相当于 enumMap.erase(enumMap.begin(), enumMap.end()); <br>
 </p>
+<h2>vector</h2>
+<p>
+在连续内存中顺序存放，对于在任意位置进行插入的操作效率比较低，因为需要把那个位置后面的所有元素都复制并往后移。<br>
+vec.insert(vec.end(),value)相当于vec.push_back(value)。<br>
+最大有点在检索（operator[])
+</p>
+<h2>list</h2>
+<p>
+不连续存放，每一项额外地存储了两个指针，分别指向前一项和后一项的位置。所以对任意位置插入的操作效率较高。<br>
+插入方法于vector相同，另外list还支持前向插入：lis.push_front(value)相当于lis.insert(lis.begin().value)<br>
+不提供检索操作（operator[]）<br>
+</p>
+<h2>deque</h2>
+<p>
+比vector多了push_front()和pop_front()操作。<br>
+operator[]没有vector效率高。<br>
+</p>
+<h2>set</h2>
+<p>
+集合，不允许相同的元素存在。使用se.insert(value)向集合添加元素。
+</p>
+<h2>总结</h2>
+<p>
+1.如果要随机访问，则vector比list好得多；<br>
+2.如果已知要存储元素的个数，则vector比list好；<br>
+3.如果需要频繁在任意位置插入元素，则list比vector好；<br>
+4.除非需要在首部插入和删除元素，否则vector比deque好。
+</p>
 </div>
 </div>
 </body>

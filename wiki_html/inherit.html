@@ -1,0 +1,77 @@
+<! DOCTYPE html>
+<html>
+<head>
+<title>Liuwanzhen's</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="../css/new.css">
+<link rel="shortcut icon" href="images/mine.ico"/>
+</head>
+
+<body class="diary_page">
+<div class="main_color">
+
+<ul id="menu">
+	<li><a href="../index.html">首页</a></li>
+        <li><a href="../aboutme.html">我</a></li>
+        <li><a href="../notes_new.html">笔记</a></li>
+        <li><a href="../diary_index.html">随笔</a></li>
+</ul>
+
+<div class="diary_content">
+<h1>C++类继承，子类型，虚拟继承</h1>
+
+<h2>虚拟函数与多态</h2>
+<p>
+<h4>1.基类对象只能访问基类成员</h4>
+<p>基类指针只能访问在该类中被声明（或继承）的数据成员和成员函数，包括虚拟成员函数，而与它可能指向的实际对象无关。把一个成员函数声明为虚拟的，只推延了“在程序执行期间根据p指向的实际类型，对于要调用的实例的解析过程”。<br>
+例如：Parent *p = new Child();<br>
+p->fun()；<br>
+此时调用的是Childe::fun()。注意，除了在Parent基类中被声明，并且在Child派生类中被改写的虚拟函数之外，我们没有办法通过p直接访问Child的任何成员（即使p->Child::name()这样添加了限定修饰也不行。<br>
+<h4>2.必须是指针</h4>
+<p>
+只有在通过基类指针或引用间接指向派生类子类型时，多态性才会起作用。Manmal *m=new Cat("BB")；然后(*m).talk()发出的才是“喵”，因为根据虚拟函数和多态的机制，此时调用的是m实际指向的类对于该虚拟函数的实现。注意，必须是指针才行，如果Manmal m = Cat("BB")那么m只是一个动物，不是个猫，它截取了Cat("BB")的一部分继承自Manmal的信息。代码大概是这样：<br>
+class Manmal { virtual void talk() {}};<br>
+class Cat { virtual void talk() { cout &lt &lt "miao";}};<br>
+调用：Manmal *a = new Cat(); (*a).talk();<br>
+</p>
+<h4>3.纯虚函数</h4>
+<p>
+1.纯虚函数的意义：告诉大家这个类是不能单独创建对象的，是一个抽象基类，只能作为子对象出现在后续的派生类中，例如
+class Manmal { virtual void talk() = 0 };<br>
+那么后续就不能声明任何Manmal的对象了，即不能Manmal a这样单独地定义了，必须依靠于实现了该纯虚函数的它的派生类，即必须Manmal *a = new Cat这样定义。<br>
+</p>
+<p>
+特殊情况下如果需要调用基类的虚函数（不是纯虚的）实现，那么只要在函数前面添加限定符即可：(*a).Manmal::talk()。
+</p>
+
+<h4>4.static成员，所有派生类统一</h4>
+<p>
+对于基类中定义的static成员，所有派生类都引用这个相同的，单一的静态成员。<br>
+</p>
+
+<h2>访问权限</h2>
+<p>
+1.如果一个派生类希望直接访问基类的私有成员，则该积累必须显式地把派生类声明为一个友元。<br>
+例如：Base Mamal { friend class Monkey; public:...};<br>
+</p>
+<p>
+2.继承类如果是public方式继承基类的话，只要是基类的非private成员，都可以拿来当自己的东西用。可以理解成，这些成员是继承自父母的，孩子本来就有的。比如Dog dog;dog.show();其中show是基类Manmal的，这是可行的。
+</p>
+
+<h2>深拷贝，浅拷贝，拷贝构造函数</h2>
+<p>
+深拷贝和浅拷贝的问题：当调用Dog dog2 = dog1;或者Dog dog2(dog1);的时候，默认会调用拷贝构造函数。但是默认的拷贝构造函数是浅拷贝，在一些情况下会导致比较危险的情况。比如如果来Dog类中，有一个成员是开辟了一个空间的，那么浅拷贝会导致dog2和dog1指向统一个空间。这样的话，delete两个对象则相当于把统一个空间释放了两次，会带来意想不到的结果。<br>
+所以这样的情况时，最好重新定义拷贝构造函数，为拷贝的目标新开辟一个空间，然后把内容从被拷贝对象拷贝过去。这就是深拷贝。<br>
+例如string类的拷贝构造函数声明为：string(congst string & s);<br>
+string(const string & s)<br>
+{<br>
+len=s.len;<br>
+str = new char[len+1];<br>
+strcpy(str, s.str);<br>
+}<br>
+</p>
+</div>
+</div>
+</body>
