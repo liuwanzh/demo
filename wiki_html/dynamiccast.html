@@ -1,0 +1,38 @@
+<! DOCTYPE html>
+<html>
+<head>
+<title>Liuwanzhen's</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="../css/new.css">
+<link rel="shortcut icon" href="images/mine.ico"/>
+</head>
+
+<body class="diary_page">
+<div class="main_color">
+
+<ul id="menu">
+	<li><a href="../index.html">首页</a></li>
+        <li><a href="../aboutme.html">我</a></li>
+        <li><a href="../notes_new.html">笔记</a></li>
+        <li><a href="../diary_index.html">随笔</a></li>
+</ul>
+
+<div class="diary_content">
+<h1>RTTI</h1>
+
+<h2>RTTI是啥</h2>
+<p>Run-Time Type Identification,运行时刻类型识别。使程序能够获取由基类指针或引用所指的对象的实际派生类型。C++中，RTTI提供了两个操作符：dynamic_cast和typeid。它们的操作数类型必须是含有虚拟函数的类类型。
+int &r = val;<br>
+</p>
+<h2>dynamic_cast操作符</h2>
+<p>
+指针和引用的主要区别：<br>
+如果用一个引用给另一个引用赋值，那么改变的是被引用的对象而不是引用本身。比如:<br>
+int &r1 = val1; int &r2 = val2; r1 = r2时达到的效果是val1变成了val2的值，而r1依然是指向val1的。<br>
+但是指针则不同：int *p1 = &val1; int *p2 = &val2; p1=p2时达到的效果则是p1和p2都指向val2，而val1的值没有变化。
+</p>
+</div>
+</div>
+</body>

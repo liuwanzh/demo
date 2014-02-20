@@ -1,0 +1,279 @@
+body {
+	background-color: #cebbd6;
+	margin-left:0;
+	margin-right:0;
+	font-family:"楷体";
+    font-size=16px;
+}
+.main_color {
+	overflow:hidden;
+	margin-bottom:7%;
+}
+
+a {
+text-decoration:none;
+}
+
+#notes_name li a {
+color:rgb(36,18,77);
+margin:0;
+}
+#notes_name li {
+list-style:none;
+padding-left:5%;
+padding-top:0;
+padding-bottom:0;
+background: url(../images/marker.png) 0 40% no-repeat;
+
+}
+#class2 {
+list-style:square;
+padding-left:10%;
+padding-top:0;
+padding-bottom:0;
+}
+#menu{
+padding-top:5%;
+padding-bottom:5%;
+}
+
+#notes_head {
+font-size:0.6em;
+color:rgb(154,19,86)
+padding-left:5%;
+padding-top:0;
+padding-right:0;
+}
+
+#notes_head p{
+color:rgb(154,19,86)
+}
+
+#menu {
+padding-left:0;
+font-size: 0.6em;
+}
+
+ul#notes_name{
+padding-left:2%;
+}
+
+#menu li{
+list-style-image: none;
+list-style-type: none;
+float: left;
+width:25%;
+}
+#menu li a{
+text-decoration: none;
+margin: 0px;
+color:rgb(224,96,145);
+padding-top: 1%;
+display: block; /* 作为一个块 */
+padding-right: 5%; /* 设置块的属性 */
+padding-bottom: 1%;
+padding-left: 5%;
+text-align:center;
+}
+
+.notes_menu, .diary_content {
+padding-top:5%;
+padding-bottom:10%;
+padding-left:2%;
+padding-right:2%;
+margin:8% 2% 2% 2%;
+background-color:white;
+}
+
+.diary_content pre {
+font-size:0.5em;
+}
+
+#picture {
+text-align:center;
+}
+img#index {
+margin-left:0;
+margin-right:0;
+max-height:55%;max-width:100%;}
+
+.slogan {
+padding:6% 0 0 6%;
+color:rgb(36,18,77);
+font-size:0.5em;
+}
+
+.banner {
+width:100%
+text-align:center;
+margin-left:3%;
+margin-right:3%;
+}
+.banner1 {
+margin:5% 1% 5% 0;
+background-color:rgb(193,115,177);
+float:left;
+width:31%;
+}
+.banner2 
+{
+margin:5% 1% 5% 1%;
+float:left;
+background-color:rgb(142,128,166);
+width:31%;
+}
+.banner3 {
+margin:5% 1% 5% 1%;
+float:left;
+background-color:rgb(154,19,86);
+width:31%;
+}
+.maxheight{
+display:block;
+text-align:center;
+padding:15% 0 15%;
+color:rgb(255,255,255);
+font-size:0.5em;
+height:50%;
+}
+
+.banner_pic {
+margin-left:0px;margin-top:0;max-height:30%;max-width:100%;
+}
+
+.contact {
+font-size:0.5em;
+color:rgb(224,96,145);
+margin-right:5%;
+text-align:right;
+}
+
+#basic1 {
+padding-left:5%;
+width:55%;
+float:left;
+font-size:0.6em;
+}
+.jianlilei {
+padding-left:5%;
+}
+.jianlilei p {
+font-size:0.75em;
+margin-top:3%;
+margin-bottom:0;
+}
+.jianlilei hr {
+text-align:center;
+width:100%;
+size:0.3em;
+margin-top:0;
+color:rgb(224,96,145);
+}
+.jianlineirong {
+font-size:0.6em;
+padding-left:5%;
+}
+.notes_detail {
+font-size:0.6em;
+padding-left:0;
+}
+#basic2 {
+float:left;
+width:40%;
+text-align:right;
+}
+#whitecolor {
+padding-top:5%;
+padding-bottom:10%;
+padding-left:2%;
+padding-right:5%;
+margin:8% 2% 2% 2%;
+background-color:white;
+overflow:hidden;
+}
+#jianlikaitou {
+overflow:hidden;
+padding-left:0;
+padding-right:0;
+}
+#basic_pic{
+margin-left:0px;margin-top:0;max-height:30%;max-width:100%;
+}
+
+.diary_page h1 {
+font-size:1em;
+text-align:center;
+color:rgb(224,96,145);
+}
+.diary_page h4 {
+font-size:0.55em;
+text-align:left;
+}
+.diary_page h2 {
+font-size:0.6em;
+text-align:center;
+color:rgb(129,84,139);
+}
+.diary_page h5 {
+font-size:0.4em;
+text-align:center;
+color:#ADADAD;
+}
+.diary_page p {
+font-size:0.5em;
+}
+
+div.calendar {
+margin-left:2%;
+margin-right:2%;
+}
+.calendar table {
+margin:auto;
+}
+
+
+/*普遍的表格内容格式*/
+td {
+text-align:center;
+background-color:#F9F900;
+padding:0;
+/*border:0 solid white;*/
+width:10%;
+color:black;
+font-size:0.5em;
+}
+
+/*有日记内容的格式唯一不同在背景色*/
+td.have_diary {
+background-color:#00E3E3;
+}
+/*表格标题，那个月份+一点心情*/
+th {
+text-align:center;
+background-color:#FF3377;
+/*border:3px solid white;*/
+color:white;
+width:90px;
+font-size:0.5em;
+}
+
+th.tablehead {
+color:white;
+padding-top:2%;
+padding-bottom:2%;
+}
+
+/*有日记的内容里，超连接的文字格式*/
+td a font{
+text-align:center;
+color:white;
+}
+
+
+/*表格上面的那个内容*/
+div.month {
+margin-top:2%;
+font-size:0.8em;
+text-align:center;
+color:#FF3377;
+}

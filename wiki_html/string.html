@@ -1,0 +1,94 @@
+<! DOCTYPE html>
+<html>
+<head>
+<title>Liuwanzhen's</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="../css/new.css">
+<link rel="shortcut icon" href="images/mine.ico"/>
+</head>
+
+<body class="diary_page">
+<div class="main_color">
+
+<ul id="menu">
+	<li><a href="../index.html">首页</a></li>
+        <li><a href="../aboutme.html">我</a></li>
+        <li><a href="../notes_new.html">笔记</a></li>
+        <li><a href="../diary_index.html">随笔</a></li>
+</ul>
+
+<div class="diary_content">
+<h1>string和cstring的总结</h1>
+
+<p>
+以下所谓的添加参数一般都是指：函数名(字符串，首位，操作位数); 例如s.append(c,2,2)是指在s后面添加c字符串的第2位后面的2位。
+</p>
+<h4>1.append:添加字符(串）。</h4>
+<p>
+1.可以是string后面加cstring<br>
+string s("Hello ");<br>
+const char *c="world";<br>
+s.append(c);<br>
+添加参数还可以在string后面加C-string的一部分
+</p>
+<p>
+2.可以是string后面加string,用append或用加号均可<br>
+string s1（“Hello "),s2("World");<br>
+s1.append(s2); //直接用+=运算符也可以：s1+=s2;<br>
+同样地，添加参数可以在string后面加string的一部分。<br>
+</p>
+
+<h4>2.assign:给string赋值（比“=”更灵活）</h4>
+<p>
+1.向string赋cstring或者向string赋string：s.assign(c); s.assign(c,3);//赋c的前3位；s.assign(c,1,2); //赋c的第1位到第3位<br>
+2.向string赋多个字符：s.assign(4, '!'); //s=“!!!!";
+</p>
+
+<h4>3.compare:对比两个string</h4>
+<p>如果相等则返回0，如果string大于参数string，返回正数。同样可以string跟string比，也可以string跟cstring比。</p>
+<p>
+string s1("Hello"); string s2("World"); const char *c="Again";<br>
+那么<br>
+s1.compare(s2); s1.compare(c); 分别就是Hello跟World和Again比较；<br>
+s1.compare(1,2,s2); 就是s1中的el来根World比；对cstring的比较也是同样的。<br>
+s1.compare(1,2,s2,3,4); 则是el跟ld比；对cstring也一样。
+</p>
+
+<h4>4.erase：删除string中的一个或几个元素。</h4>
+<p>
+前两个函数返回要被删除的子串的下一个元素的iterator；第三个函数返回删除侯的string的引用。</p>
+<p>1.删除string中从_First到_Last的字符<br>
+s1.erase(s1.begin(),s1.begin()+3); //删除了Hel
+</p><p>
+2.删除指向的字符<br>
+s1.erase(s1.begin()+1); //删除了Hello中的e，执行后s1变为Hllo;
+</p><p>
+3.删除从pos开始的count个字符<br>
+s1.erase(1,2); //删除了el两个字符，执行侯返回s1为Hlo;
+</p>
+
+<h4>5.find：寻找给定的string或者cstring</h4>
+<p>返回找到的第一个string下标；如果没有则返回string::npos。
+</p>
+<p>s1.find("e");返回1；<br>
+s1.find("el");返回1；<br>
+s1.find("o",2);返回4，表示从第2位开始找；<br>
+s1.find("e",2);返回npos，从第2位开始找e就找不到了。<br>
+
+<h4>replace：将原string中的子串替换</h4>
+<p>返回替换后的string</p>
+
+<h4>substr：返回从某一个下标开始的count个字符组成的string</h4>
+<p>sub=s1.substr(); //sub=“Hello”<br>
+sub=s1.substr(1); //sub="ello"<br>
+sub=s1.substr(1,3); //sub="ell"<br>
+<p>
+
+<p>
+参考至：http://blog.pfan.cn/tonyhu/articlelist_2797_3755_1.html
+</p>
+</div>
+</div>
+</body>
